@@ -1,2 +1,4 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(3046,5): warning MSB3088: Could not read state file "Debug\SUDOKU.vcxproj.GenerateResource.cache". Unable to find assembly 'Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(3046,5): error MSB3821: Couldn't process file Sudoku.resx due to its being in the Internet or Restricted zone or having the mark of the web on the file. Remove the mark of the web if you want to process these files.
+﻿  Sudoku.cpp
+  Sudoku.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
+  Sudoku.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  SUDOKU.vcxproj -> M:\Sudoku Game\SUDOKU\Debug\SUDOKU.exe

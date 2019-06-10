@@ -96,8 +96,8 @@ namespace SUDOKU {
 	private: System::Windows::Forms::TextBox^  textBox31;
 	private: System::Windows::Forms::TextBox^  textBox32;
 	private: System::Windows::Forms::TextBox^  textBox33;
-	private: System::Windows::Forms::TextBox^  textBox34;
-	private: System::Windows::Forms::TextBox^  textBox35;
+
+
 	private: System::Windows::Forms::TextBox^  textBox36;
 	private: System::Windows::Forms::TextBox^  textBox37;
 	private: System::Windows::Forms::TextBox^  textBox38;
@@ -105,8 +105,8 @@ namespace SUDOKU {
 	private: System::Windows::Forms::TextBox^  textBox40;
 	private: System::Windows::Forms::TextBox^  textBox41;
 	private: System::Windows::Forms::TextBox^  textBox42;
-	private: System::Windows::Forms::TextBox^  textBox43;
-	private: System::Windows::Forms::TextBox^  textBox44;
+
+
 	private: System::Windows::Forms::TextBox^  textBox45;
 	private: System::Windows::Forms::TextBox^  textBox46;
 	private: System::Windows::Forms::TextBox^  textBox47;
@@ -114,7 +114,7 @@ namespace SUDOKU {
 	private: System::Windows::Forms::TextBox^  textBox49;
 	private: System::Windows::Forms::TextBox^  textBox50;
 	private: System::Windows::Forms::TextBox^  textBox51;
-	private: System::Windows::Forms::TextBox^  textBox52;
+
 	private: System::Windows::Forms::TextBox^  textBox53;
 	private: System::Windows::Forms::TextBox^  textBox54;
 	private: System::Windows::Forms::TextBox^  textBox55;
@@ -147,6 +147,11 @@ namespace SUDOKU {
 
 	public: array<TextBox ^> ^ sudokuTextBox;
 private: System::Windows::Forms::ToolStripMenuItem^  checkToolStripMenuItem;
+private: System::Windows::Forms::TextBox^ textBox34;
+private: System::Windows::Forms::TextBox^ textBox35;
+private: System::Windows::Forms::TextBox^ textBox43;
+private: System::Windows::Forms::TextBox^ textBox44;
+private: System::Windows::Forms::TextBox^ textBox52;
 public:
 
 	private:
@@ -155,7 +160,6 @@ public:
 #pragma region Windows Form Designer generated code
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Sudoku::typeid));
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->fileToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->newToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -202,8 +206,6 @@ public:
 			this->textBox31 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox32 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox33 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox34 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox35 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox36 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox37 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox38 = (gcnew System::Windows::Forms::TextBox());
@@ -211,8 +213,6 @@ public:
 			this->textBox40 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox41 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox42 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox43 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox44 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox45 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox46 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox47 = (gcnew System::Windows::Forms::TextBox());
@@ -220,7 +220,6 @@ public:
 			this->textBox49 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox50 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox51 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox52 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox53 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox54 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox55 = (gcnew System::Windows::Forms::TextBox());
@@ -250,13 +249,16 @@ public:
 			this->textBox79 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox80 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox81 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox34 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox35 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox43 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox44 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox52 = (gcnew System::Windows::Forms::TextBox());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
-
 			// 
 			// menuStrip1
 			// 
-
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
 				this->fileToolStripMenuItem,
 					this->levelToolStripMenuItem, this->aboutToolStripMenuItem
@@ -266,11 +268,9 @@ public:
 			this->menuStrip1->Size = System::Drawing::Size(427, 24);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
-
 			// 
 			// fileToolStripMenuItem
 			// 
-
 			this->fileToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
 				this->newToolStripMenuItem,
 					this->checkToolStripMenuItem, this->solveToolStripMenuItem, this->exitToolStripMenuItem
@@ -366,12 +366,12 @@ public:
 			// 
 			// textBox1
 			// 
-			this->textBox1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(235)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->textBox1->BackColor = System::Drawing::Color::White;
 			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox1->ForeColor = System::Drawing::Color::Red;
+			this->textBox1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
+				static_cast<System::Int32>(static_cast<System::Byte>(235)));
 			this->textBox1->Location = System::Drawing::Point(50, 68);
 			this->textBox1->MaxLength = 1;
 			this->textBox1->Name = L"textBox1";
@@ -382,12 +382,11 @@ public:
 			// 
 			// textBox2
 			// 
-			this->textBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(235)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->textBox2->BackColor = System::Drawing::Color::White;
 			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox2->ForeColor = System::Drawing::Color::Red;
+			this->textBox2->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox2->Location = System::Drawing::Point(87, 68);
 			this->textBox2->MaxLength = 1;
 			this->textBox2->Name = L"textBox2";
@@ -398,12 +397,11 @@ public:
 			// 
 			// textBox3
 			// 
-			this->textBox3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(235)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->textBox3->BackColor = System::Drawing::Color::White;
 			this->textBox3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox3->ForeColor = System::Drawing::Color::Red;
+			this->textBox3->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox3->Location = System::Drawing::Point(124, 68);
 			this->textBox3->MaxLength = 1;
 			this->textBox3->Name = L"textBox3";
@@ -414,12 +412,11 @@ public:
 			// 
 			// textBox4
 			// 
-			this->textBox4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(225)));
+			this->textBox4->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox4->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox4->ForeColor = System::Drawing::Color::Red;
+			this->textBox4->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox4->Location = System::Drawing::Point(161, 68);
 			this->textBox4->MaxLength = 1;
 			this->textBox4->Name = L"textBox4";
@@ -430,12 +427,11 @@ public:
 			// 
 			// textBox5
 			// 
-			this->textBox5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(225)));
+			this->textBox5->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox5->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox5->ForeColor = System::Drawing::Color::Red;
+			this->textBox5->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox5->Location = System::Drawing::Point(198, 68);
 			this->textBox5->MaxLength = 1;
 			this->textBox5->Name = L"textBox5";
@@ -446,12 +442,11 @@ public:
 			// 
 			// textBox6
 			// 
-			this->textBox6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(225)));
+			this->textBox6->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox6->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox6->ForeColor = System::Drawing::Color::Red;
+			this->textBox6->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox6->Location = System::Drawing::Point(235, 68);
 			this->textBox6->MaxLength = 1;
 			this->textBox6->Name = L"textBox6";
@@ -462,12 +457,11 @@ public:
 			// 
 			// textBox7
 			// 
-			this->textBox7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->textBox7->BackColor = System::Drawing::Color::White;
 			this->textBox7->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox7->ForeColor = System::Drawing::Color::Red;
+			this->textBox7->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox7->Location = System::Drawing::Point(272, 68);
 			this->textBox7->MaxLength = 1;
 			this->textBox7->Name = L"textBox7";
@@ -478,12 +472,11 @@ public:
 			// 
 			// textBox8
 			// 
-			this->textBox8->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->textBox8->BackColor = System::Drawing::Color::White;
 			this->textBox8->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox8->ForeColor = System::Drawing::Color::Red;
+			this->textBox8->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox8->Location = System::Drawing::Point(309, 68);
 			this->textBox8->MaxLength = 1;
 			this->textBox8->Name = L"textBox8";
@@ -494,12 +487,11 @@ public:
 			// 
 			// textBox9
 			// 
-			this->textBox9->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->textBox9->BackColor = System::Drawing::Color::White;
 			this->textBox9->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox9->ForeColor = System::Drawing::Color::Red;
+			this->textBox9->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox9->Location = System::Drawing::Point(346, 68);
 			this->textBox9->MaxLength = 1;
 			this->textBox9->Name = L"textBox9";
@@ -510,12 +502,11 @@ public:
 			// 
 			// textBox10
 			// 
-			this->textBox10->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(235)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->textBox10->BackColor = System::Drawing::Color::White;
 			this->textBox10->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox10->ForeColor = System::Drawing::Color::Red;
+			this->textBox10->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox10->Location = System::Drawing::Point(50, 105);
 			this->textBox10->MaxLength = 1;
 			this->textBox10->Name = L"textBox10";
@@ -526,12 +517,11 @@ public:
 			// 
 			// textBox11
 			// 
-			this->textBox11->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(235)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->textBox11->BackColor = System::Drawing::Color::White;
 			this->textBox11->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox11->ForeColor = System::Drawing::Color::Red;
+			this->textBox11->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox11->Location = System::Drawing::Point(87, 105);
 			this->textBox11->MaxLength = 1;
 			this->textBox11->Name = L"textBox11";
@@ -542,12 +532,11 @@ public:
 			// 
 			// textBox12
 			// 
-			this->textBox12->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(235)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->textBox12->BackColor = System::Drawing::Color::White;
 			this->textBox12->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox12->ForeColor = System::Drawing::Color::Red;
+			this->textBox12->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox12->Location = System::Drawing::Point(124, 105);
 			this->textBox12->MaxLength = 1;
 			this->textBox12->Name = L"textBox12";
@@ -558,12 +547,11 @@ public:
 			// 
 			// textBox13
 			// 
-			this->textBox13->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(225)));
+			this->textBox13->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox13->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox13->ForeColor = System::Drawing::Color::Red;
+			this->textBox13->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox13->Location = System::Drawing::Point(161, 105);
 			this->textBox13->MaxLength = 1;
 			this->textBox13->Name = L"textBox13";
@@ -574,12 +562,11 @@ public:
 			// 
 			// textBox14
 			// 
-			this->textBox14->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(225)));
+			this->textBox14->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox14->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox14->ForeColor = System::Drawing::Color::Red;
+			this->textBox14->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox14->Location = System::Drawing::Point(198, 105);
 			this->textBox14->MaxLength = 1;
 			this->textBox14->Name = L"textBox14";
@@ -590,12 +577,11 @@ public:
 			// 
 			// textBox15
 			// 
-			this->textBox15->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(225)));
+			this->textBox15->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox15->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox15->ForeColor = System::Drawing::Color::Red;
+			this->textBox15->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox15->Location = System::Drawing::Point(235, 105);
 			this->textBox15->MaxLength = 1;
 			this->textBox15->Name = L"textBox15";
@@ -606,12 +592,11 @@ public:
 			// 
 			// textBox16
 			// 
-			this->textBox16->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->textBox16->BackColor = System::Drawing::Color::White;
 			this->textBox16->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox16->ForeColor = System::Drawing::Color::Red;
+			this->textBox16->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox16->Location = System::Drawing::Point(272, 105);
 			this->textBox16->MaxLength = 1;
 			this->textBox16->Name = L"textBox16";
@@ -622,12 +607,11 @@ public:
 			// 
 			// textBox17
 			// 
-			this->textBox17->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->textBox17->BackColor = System::Drawing::Color::White;
 			this->textBox17->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox17->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox17->ForeColor = System::Drawing::Color::Red;
+			this->textBox17->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox17->Location = System::Drawing::Point(309, 105);
 			this->textBox17->MaxLength = 1;
 			this->textBox17->Name = L"textBox17";
@@ -638,12 +622,11 @@ public:
 			// 
 			// textBox18
 			// 
-			this->textBox18->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->textBox18->BackColor = System::Drawing::Color::White;
 			this->textBox18->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox18->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox18->ForeColor = System::Drawing::Color::Red;
+			this->textBox18->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox18->Location = System::Drawing::Point(346, 105);
 			this->textBox18->MaxLength = 1;
 			this->textBox18->Name = L"textBox18";
@@ -654,12 +637,11 @@ public:
 			// 
 			// textBox19
 			// 
-			this->textBox19->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(235)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->textBox19->BackColor = System::Drawing::Color::White;
 			this->textBox19->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox19->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox19->ForeColor = System::Drawing::Color::Red;
+			this->textBox19->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox19->Location = System::Drawing::Point(50, 142);
 			this->textBox19->MaxLength = 1;
 			this->textBox19->Name = L"textBox19";
@@ -670,12 +652,11 @@ public:
 			// 
 			// textBox20
 			// 
-			this->textBox20->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(235)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->textBox20->BackColor = System::Drawing::Color::White;
 			this->textBox20->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox20->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox20->ForeColor = System::Drawing::Color::Red;
+			this->textBox20->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox20->Location = System::Drawing::Point(87, 142);
 			this->textBox20->MaxLength = 1;
 			this->textBox20->Name = L"textBox20";
@@ -686,12 +667,11 @@ public:
 			// 
 			// textBox21
 			// 
-			this->textBox21->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(235)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->textBox21->BackColor = System::Drawing::Color::White;
 			this->textBox21->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox21->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox21->ForeColor = System::Drawing::Color::Red;
+			this->textBox21->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox21->Location = System::Drawing::Point(124, 142);
 			this->textBox21->MaxLength = 1;
 			this->textBox21->Name = L"textBox21";
@@ -702,12 +682,11 @@ public:
 			// 
 			// textBox22
 			// 
-			this->textBox22->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(225)));
+			this->textBox22->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox22->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox22->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox22->ForeColor = System::Drawing::Color::Red;
+			this->textBox22->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox22->Location = System::Drawing::Point(161, 142);
 			this->textBox22->MaxLength = 1;
 			this->textBox22->Name = L"textBox22";
@@ -718,12 +697,11 @@ public:
 			// 
 			// textBox23
 			// 
-			this->textBox23->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(225)));
+			this->textBox23->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox23->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox23->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox23->ForeColor = System::Drawing::Color::Red;
+			this->textBox23->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox23->Location = System::Drawing::Point(198, 142);
 			this->textBox23->MaxLength = 1;
 			this->textBox23->Name = L"textBox23";
@@ -734,12 +712,11 @@ public:
 			// 
 			// textBox24
 			// 
-			this->textBox24->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(225)));
+			this->textBox24->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox24->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox24->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox24->ForeColor = System::Drawing::Color::Red;
+			this->textBox24->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox24->Location = System::Drawing::Point(235, 142);
 			this->textBox24->MaxLength = 1;
 			this->textBox24->Name = L"textBox24";
@@ -750,12 +727,11 @@ public:
 			// 
 			// textBox25
 			// 
-			this->textBox25->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->textBox25->BackColor = System::Drawing::Color::White;
 			this->textBox25->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox25->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox25->ForeColor = System::Drawing::Color::Red;
+			this->textBox25->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox25->Location = System::Drawing::Point(272, 142);
 			this->textBox25->MaxLength = 1;
 			this->textBox25->Name = L"textBox25";
@@ -766,12 +742,11 @@ public:
 			// 
 			// textBox26
 			// 
-			this->textBox26->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->textBox26->BackColor = System::Drawing::Color::White;
 			this->textBox26->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox26->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox26->ForeColor = System::Drawing::Color::Red;
+			this->textBox26->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox26->Location = System::Drawing::Point(309, 142);
 			this->textBox26->MaxLength = 1;
 			this->textBox26->Name = L"textBox26";
@@ -782,12 +757,11 @@ public:
 			// 
 			// textBox27
 			// 
-			this->textBox27->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->textBox27->BackColor = System::Drawing::Color::White;
 			this->textBox27->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox27->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox27->ForeColor = System::Drawing::Color::Red;
+			this->textBox27->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox27->Location = System::Drawing::Point(346, 142);
 			this->textBox27->MaxLength = 1;
 			this->textBox27->Name = L"textBox27";
@@ -798,12 +772,11 @@ public:
 			// 
 			// textBox28
 			// 
-			this->textBox28->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(225)));
+			this->textBox28->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox28->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox28->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox28->ForeColor = System::Drawing::Color::Red;
+			this->textBox28->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox28->Location = System::Drawing::Point(50, 179);
 			this->textBox28->MaxLength = 1;
 			this->textBox28->Name = L"textBox28";
@@ -814,12 +787,11 @@ public:
 			// 
 			// textBox29
 			// 
-			this->textBox29->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(225)));
+			this->textBox29->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox29->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox29->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox29->ForeColor = System::Drawing::Color::Red;
+			this->textBox29->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox29->Location = System::Drawing::Point(87, 179);
 			this->textBox29->MaxLength = 1;
 			this->textBox29->Name = L"textBox29";
@@ -830,12 +802,11 @@ public:
 			// 
 			// textBox30
 			// 
-			this->textBox30->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(225)));
+			this->textBox30->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox30->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox30->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox30->ForeColor = System::Drawing::Color::Red;
+			this->textBox30->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox30->Location = System::Drawing::Point(124, 179);
 			this->textBox30->MaxLength = 1;
 			this->textBox30->Name = L"textBox30";
@@ -846,12 +817,11 @@ public:
 			// 
 			// textBox31
 			// 
-			this->textBox31->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->textBox31->BackColor = System::Drawing::Color::White;
 			this->textBox31->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox31->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox31->ForeColor = System::Drawing::Color::Red;
+			this->textBox31->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox31->Location = System::Drawing::Point(161, 179);
 			this->textBox31->MaxLength = 1;
 			this->textBox31->Name = L"textBox31";
@@ -862,12 +832,11 @@ public:
 			// 
 			// textBox32
 			// 
-			this->textBox32->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->textBox32->BackColor = System::Drawing::Color::White;
 			this->textBox32->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox32->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox32->ForeColor = System::Drawing::Color::Red;
+			this->textBox32->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox32->Location = System::Drawing::Point(198, 179);
 			this->textBox32->MaxLength = 1;
 			this->textBox32->Name = L"textBox32";
@@ -878,12 +847,11 @@ public:
 			// 
 			// textBox33
 			// 
-			this->textBox33->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->textBox33->BackColor = System::Drawing::Color::White;
 			this->textBox33->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox33->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox33->ForeColor = System::Drawing::Color::Red;
+			this->textBox33->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox33->Location = System::Drawing::Point(235, 179);
 			this->textBox33->MaxLength = 1;
 			this->textBox33->Name = L"textBox33";
@@ -892,46 +860,13 @@ public:
 			this->textBox33->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			this->textBox33->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Sudoku::textBox81_KeyPress);
 			// 
-			// textBox34
-			// 
-			this->textBox34->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(235)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->textBox34->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->textBox34->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->textBox34->ForeColor = System::Drawing::Color::Red;
-			this->textBox34->Location = System::Drawing::Point(272, 179);
-			this->textBox34->MaxLength = 1;
-			this->textBox34->Name = L"textBox34";
-			this->textBox34->Size = System::Drawing::Size(31, 31);
-			this->textBox34->TabIndex = 34;
-			this->textBox34->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
-			this->textBox34->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Sudoku::textBox81_KeyPress);
-			// 
-			// textBox35
-			// 
-			this->textBox35->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(235)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->textBox35->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->textBox35->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->textBox35->ForeColor = System::Drawing::Color::Red;
-			this->textBox35->Location = System::Drawing::Point(309, 179);
-			this->textBox35->MaxLength = 1;
-			this->textBox35->Name = L"textBox35";
-			this->textBox35->Size = System::Drawing::Size(31, 31);
-			this->textBox35->TabIndex = 35;
-			this->textBox35->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
-			this->textBox35->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Sudoku::textBox81_KeyPress);
-			// 
 			// textBox36
 			// 
-			this->textBox36->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(235)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->textBox36->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox36->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox36->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox36->ForeColor = System::Drawing::Color::Red;
+			this->textBox36->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox36->Location = System::Drawing::Point(346, 179);
 			this->textBox36->MaxLength = 1;
 			this->textBox36->Name = L"textBox36";
@@ -942,12 +877,11 @@ public:
 			// 
 			// textBox37
 			// 
-			this->textBox37->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(225)));
+			this->textBox37->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox37->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox37->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox37->ForeColor = System::Drawing::Color::Red;
+			this->textBox37->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox37->Location = System::Drawing::Point(50, 216);
 			this->textBox37->MaxLength = 1;
 			this->textBox37->Name = L"textBox37";
@@ -958,12 +892,11 @@ public:
 			// 
 			// textBox38
 			// 
-			this->textBox38->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(225)));
+			this->textBox38->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox38->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox38->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox38->ForeColor = System::Drawing::Color::Red;
+			this->textBox38->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox38->Location = System::Drawing::Point(87, 216);
 			this->textBox38->MaxLength = 1;
 			this->textBox38->Name = L"textBox38";
@@ -974,12 +907,11 @@ public:
 			// 
 			// textBox39
 			// 
-			this->textBox39->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(225)));
+			this->textBox39->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox39->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox39->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox39->ForeColor = System::Drawing::Color::Red;
+			this->textBox39->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox39->Location = System::Drawing::Point(124, 216);
 			this->textBox39->MaxLength = 1;
 			this->textBox39->Name = L"textBox39";
@@ -990,12 +922,11 @@ public:
 			// 
 			// textBox40
 			// 
-			this->textBox40->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->textBox40->BackColor = System::Drawing::Color::White;
 			this->textBox40->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox40->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox40->ForeColor = System::Drawing::Color::Red;
+			this->textBox40->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox40->Location = System::Drawing::Point(161, 216);
 			this->textBox40->MaxLength = 1;
 			this->textBox40->Name = L"textBox40";
@@ -1006,12 +937,11 @@ public:
 			// 
 			// textBox41
 			// 
-			this->textBox41->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->textBox41->BackColor = System::Drawing::Color::White;
 			this->textBox41->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox41->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox41->ForeColor = System::Drawing::Color::Red;
+			this->textBox41->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox41->Location = System::Drawing::Point(198, 216);
 			this->textBox41->MaxLength = 1;
 			this->textBox41->Name = L"textBox41";
@@ -1022,12 +952,11 @@ public:
 			// 
 			// textBox42
 			// 
-			this->textBox42->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->textBox42->BackColor = System::Drawing::Color::White;
 			this->textBox42->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox42->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox42->ForeColor = System::Drawing::Color::Red;
+			this->textBox42->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox42->Location = System::Drawing::Point(235, 216);
 			this->textBox42->MaxLength = 1;
 			this->textBox42->Name = L"textBox42";
@@ -1036,46 +965,13 @@ public:
 			this->textBox42->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			this->textBox42->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Sudoku::textBox81_KeyPress);
 			// 
-			// textBox43
-			// 
-			this->textBox43->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(235)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->textBox43->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->textBox43->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->textBox43->ForeColor = System::Drawing::Color::Red;
-			this->textBox43->Location = System::Drawing::Point(272, 216);
-			this->textBox43->MaxLength = 1;
-			this->textBox43->Name = L"textBox43";
-			this->textBox43->Size = System::Drawing::Size(31, 31);
-			this->textBox43->TabIndex = 43;
-			this->textBox43->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
-			this->textBox43->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Sudoku::textBox81_KeyPress);
-			// 
-			// textBox44
-			// 
-			this->textBox44->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(235)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->textBox44->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->textBox44->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->textBox44->ForeColor = System::Drawing::Color::Red;
-			this->textBox44->Location = System::Drawing::Point(309, 216);
-			this->textBox44->MaxLength = 1;
-			this->textBox44->Name = L"textBox44";
-			this->textBox44->Size = System::Drawing::Size(31, 31);
-			this->textBox44->TabIndex = 44;
-			this->textBox44->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
-			this->textBox44->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Sudoku::textBox81_KeyPress);
-			// 
 			// textBox45
 			// 
-			this->textBox45->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(235)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->textBox45->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox45->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox45->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox45->ForeColor = System::Drawing::Color::Red;
+			this->textBox45->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox45->Location = System::Drawing::Point(346, 216);
 			this->textBox45->MaxLength = 1;
 			this->textBox45->Name = L"textBox45";
@@ -1086,12 +982,11 @@ public:
 			// 
 			// textBox46
 			// 
-			this->textBox46->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(225)));
+			this->textBox46->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox46->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox46->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox46->ForeColor = System::Drawing::Color::Red;
+			this->textBox46->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox46->Location = System::Drawing::Point(50, 253);
 			this->textBox46->MaxLength = 1;
 			this->textBox46->Name = L"textBox46";
@@ -1102,12 +997,11 @@ public:
 			// 
 			// textBox47
 			// 
-			this->textBox47->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(225)));
+			this->textBox47->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox47->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox47->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox47->ForeColor = System::Drawing::Color::Red;
+			this->textBox47->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox47->Location = System::Drawing::Point(87, 253);
 			this->textBox47->MaxLength = 1;
 			this->textBox47->Name = L"textBox47";
@@ -1118,12 +1012,11 @@ public:
 			// 
 			// textBox48
 			// 
-			this->textBox48->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(225)));
+			this->textBox48->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox48->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox48->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox48->ForeColor = System::Drawing::Color::Red;
+			this->textBox48->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox48->Location = System::Drawing::Point(124, 253);
 			this->textBox48->MaxLength = 1;
 			this->textBox48->Name = L"textBox48";
@@ -1134,12 +1027,11 @@ public:
 			// 
 			// textBox49
 			// 
-			this->textBox49->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->textBox49->BackColor = System::Drawing::Color::White;
 			this->textBox49->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox49->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox49->ForeColor = System::Drawing::Color::Red;
+			this->textBox49->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox49->Location = System::Drawing::Point(161, 253);
 			this->textBox49->MaxLength = 1;
 			this->textBox49->Name = L"textBox49";
@@ -1150,12 +1042,11 @@ public:
 			// 
 			// textBox50
 			// 
-			this->textBox50->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->textBox50->BackColor = System::Drawing::Color::White;
 			this->textBox50->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox50->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox50->ForeColor = System::Drawing::Color::Red;
+			this->textBox50->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox50->Location = System::Drawing::Point(198, 253);
 			this->textBox50->MaxLength = 1;
 			this->textBox50->Name = L"textBox50";
@@ -1166,12 +1057,11 @@ public:
 			// 
 			// textBox51
 			// 
-			this->textBox51->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->textBox51->BackColor = System::Drawing::Color::White;
 			this->textBox51->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox51->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox51->ForeColor = System::Drawing::Color::Red;
+			this->textBox51->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox51->Location = System::Drawing::Point(235, 253);
 			this->textBox51->MaxLength = 1;
 			this->textBox51->Name = L"textBox51";
@@ -1180,30 +1070,13 @@ public:
 			this->textBox51->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			this->textBox51->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Sudoku::textBox81_KeyPress);
 			// 
-			// textBox52
-			// 
-			this->textBox52->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(235)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->textBox52->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->textBox52->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->textBox52->ForeColor = System::Drawing::Color::Red;
-			this->textBox52->Location = System::Drawing::Point(272, 253);
-			this->textBox52->MaxLength = 1;
-			this->textBox52->Name = L"textBox52";
-			this->textBox52->Size = System::Drawing::Size(31, 31);
-			this->textBox52->TabIndex = 52;
-			this->textBox52->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
-			this->textBox52->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Sudoku::textBox81_KeyPress);
-			// 
 			// textBox53
 			// 
-			this->textBox53->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(235)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->textBox53->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox53->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox53->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox53->ForeColor = System::Drawing::Color::Red;
+			this->textBox53->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox53->Location = System::Drawing::Point(309, 253);
 			this->textBox53->MaxLength = 1;
 			this->textBox53->Name = L"textBox53";
@@ -1214,12 +1087,11 @@ public:
 			// 
 			// textBox54
 			// 
-			this->textBox54->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(235)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->textBox54->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox54->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox54->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox54->ForeColor = System::Drawing::Color::Red;
+			this->textBox54->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox54->Location = System::Drawing::Point(346, 253);
 			this->textBox54->MaxLength = 1;
 			this->textBox54->Name = L"textBox54";
@@ -1230,12 +1102,11 @@ public:
 			// 
 			// textBox55
 			// 
-			this->textBox55->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->textBox55->BackColor = System::Drawing::Color::White;
 			this->textBox55->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox55->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox55->ForeColor = System::Drawing::Color::Red;
+			this->textBox55->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox55->Location = System::Drawing::Point(50, 290);
 			this->textBox55->MaxLength = 1;
 			this->textBox55->Name = L"textBox55";
@@ -1246,12 +1117,11 @@ public:
 			// 
 			// textBox56
 			// 
-			this->textBox56->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->textBox56->BackColor = System::Drawing::Color::White;
 			this->textBox56->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox56->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox56->ForeColor = System::Drawing::Color::Red;
+			this->textBox56->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox56->Location = System::Drawing::Point(87, 290);
 			this->textBox56->MaxLength = 1;
 			this->textBox56->Name = L"textBox56";
@@ -1262,12 +1132,11 @@ public:
 			// 
 			// textBox57
 			// 
-			this->textBox57->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->textBox57->BackColor = System::Drawing::Color::White;
 			this->textBox57->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox57->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox57->ForeColor = System::Drawing::Color::Red;
+			this->textBox57->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox57->Location = System::Drawing::Point(124, 290);
 			this->textBox57->MaxLength = 1;
 			this->textBox57->Name = L"textBox57";
@@ -1278,12 +1147,11 @@ public:
 			// 
 			// textBox58
 			// 
-			this->textBox58->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(235)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->textBox58->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox58->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox58->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox58->ForeColor = System::Drawing::Color::Red;
+			this->textBox58->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox58->Location = System::Drawing::Point(161, 290);
 			this->textBox58->MaxLength = 1;
 			this->textBox58->Name = L"textBox58";
@@ -1294,12 +1162,11 @@ public:
 			// 
 			// textBox59
 			// 
-			this->textBox59->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(235)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->textBox59->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox59->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox59->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox59->ForeColor = System::Drawing::Color::Red;
+			this->textBox59->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox59->Location = System::Drawing::Point(198, 290);
 			this->textBox59->MaxLength = 1;
 			this->textBox59->Name = L"textBox59";
@@ -1310,12 +1177,11 @@ public:
 			// 
 			// textBox60
 			// 
-			this->textBox60->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(235)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->textBox60->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox60->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox60->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox60->ForeColor = System::Drawing::Color::Red;
+			this->textBox60->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox60->Location = System::Drawing::Point(235, 290);
 			this->textBox60->MaxLength = 1;
 			this->textBox60->Name = L"textBox60";
@@ -1326,12 +1192,11 @@ public:
 			// 
 			// textBox61
 			// 
-			this->textBox61->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(225)));
+			this->textBox61->BackColor = System::Drawing::Color::White;
 			this->textBox61->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox61->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox61->ForeColor = System::Drawing::Color::Red;
+			this->textBox61->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox61->Location = System::Drawing::Point(272, 290);
 			this->textBox61->MaxLength = 1;
 			this->textBox61->Name = L"textBox61";
@@ -1342,12 +1207,11 @@ public:
 			// 
 			// textBox62
 			// 
-			this->textBox62->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(225)));
+			this->textBox62->BackColor = System::Drawing::Color::White;
 			this->textBox62->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox62->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox62->ForeColor = System::Drawing::Color::Red;
+			this->textBox62->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox62->Location = System::Drawing::Point(309, 290);
 			this->textBox62->MaxLength = 1;
 			this->textBox62->Name = L"textBox62";
@@ -1358,12 +1222,11 @@ public:
 			// 
 			// textBox63
 			// 
-			this->textBox63->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(225)));
+			this->textBox63->BackColor = System::Drawing::Color::White;
 			this->textBox63->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox63->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox63->ForeColor = System::Drawing::Color::Red;
+			this->textBox63->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox63->Location = System::Drawing::Point(346, 290);
 			this->textBox63->MaxLength = 1;
 			this->textBox63->Name = L"textBox63";
@@ -1374,12 +1237,11 @@ public:
 			// 
 			// textBox64
 			// 
-			this->textBox64->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->textBox64->BackColor = System::Drawing::Color::White;
 			this->textBox64->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox64->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox64->ForeColor = System::Drawing::Color::Red;
+			this->textBox64->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox64->Location = System::Drawing::Point(50, 327);
 			this->textBox64->MaxLength = 1;
 			this->textBox64->Name = L"textBox64";
@@ -1390,12 +1252,11 @@ public:
 			// 
 			// textBox65
 			// 
-			this->textBox65->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->textBox65->BackColor = System::Drawing::Color::White;
 			this->textBox65->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox65->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox65->ForeColor = System::Drawing::Color::Red;
+			this->textBox65->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox65->Location = System::Drawing::Point(87, 327);
 			this->textBox65->MaxLength = 1;
 			this->textBox65->Name = L"textBox65";
@@ -1406,12 +1267,11 @@ public:
 			// 
 			// textBox66
 			// 
-			this->textBox66->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->textBox66->BackColor = System::Drawing::Color::White;
 			this->textBox66->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox66->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox66->ForeColor = System::Drawing::Color::Red;
+			this->textBox66->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox66->Location = System::Drawing::Point(124, 327);
 			this->textBox66->MaxLength = 1;
 			this->textBox66->Name = L"textBox66";
@@ -1422,12 +1282,11 @@ public:
 			// 
 			// textBox67
 			// 
-			this->textBox67->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(235)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->textBox67->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox67->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox67->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox67->ForeColor = System::Drawing::Color::Red;
+			this->textBox67->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox67->Location = System::Drawing::Point(161, 327);
 			this->textBox67->MaxLength = 1;
 			this->textBox67->Name = L"textBox67";
@@ -1438,12 +1297,11 @@ public:
 			// 
 			// textBox68
 			// 
-			this->textBox68->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(235)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->textBox68->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox68->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox68->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox68->ForeColor = System::Drawing::Color::Red;
+			this->textBox68->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox68->Location = System::Drawing::Point(198, 327);
 			this->textBox68->MaxLength = 1;
 			this->textBox68->Name = L"textBox68";
@@ -1454,12 +1312,11 @@ public:
 			// 
 			// textBox69
 			// 
-			this->textBox69->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(235)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->textBox69->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox69->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox69->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox69->ForeColor = System::Drawing::Color::Red;
+			this->textBox69->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox69->Location = System::Drawing::Point(235, 327);
 			this->textBox69->MaxLength = 1;
 			this->textBox69->Name = L"textBox69";
@@ -1470,12 +1327,11 @@ public:
 			// 
 			// textBox70
 			// 
-			this->textBox70->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(225)));
+			this->textBox70->BackColor = System::Drawing::Color::White;
 			this->textBox70->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox70->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox70->ForeColor = System::Drawing::Color::Red;
+			this->textBox70->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox70->Location = System::Drawing::Point(272, 327);
 			this->textBox70->MaxLength = 1;
 			this->textBox70->Name = L"textBox70";
@@ -1486,12 +1342,11 @@ public:
 			// 
 			// textBox71
 			// 
-			this->textBox71->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(225)));
+			this->textBox71->BackColor = System::Drawing::Color::White;
 			this->textBox71->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox71->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox71->ForeColor = System::Drawing::Color::Red;
+			this->textBox71->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox71->Location = System::Drawing::Point(309, 327);
 			this->textBox71->MaxLength = 1;
 			this->textBox71->Name = L"textBox71";
@@ -1502,12 +1357,11 @@ public:
 			// 
 			// textBox72
 			// 
-			this->textBox72->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(225)));
+			this->textBox72->BackColor = System::Drawing::Color::White;
 			this->textBox72->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox72->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox72->ForeColor = System::Drawing::Color::Red;
+			this->textBox72->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox72->Location = System::Drawing::Point(346, 327);
 			this->textBox72->MaxLength = 1;
 			this->textBox72->Name = L"textBox72";
@@ -1518,12 +1372,11 @@ public:
 			// 
 			// textBox73
 			// 
-			this->textBox73->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->textBox73->BackColor = System::Drawing::Color::White;
 			this->textBox73->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox73->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox73->ForeColor = System::Drawing::Color::Red;
+			this->textBox73->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox73->Location = System::Drawing::Point(50, 364);
 			this->textBox73->MaxLength = 1;
 			this->textBox73->Name = L"textBox73";
@@ -1534,12 +1387,11 @@ public:
 			// 
 			// textBox74
 			// 
-			this->textBox74->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->textBox74->BackColor = System::Drawing::Color::White;
 			this->textBox74->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox74->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox74->ForeColor = System::Drawing::Color::Red;
+			this->textBox74->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox74->Location = System::Drawing::Point(87, 364);
 			this->textBox74->MaxLength = 1;
 			this->textBox74->Name = L"textBox74";
@@ -1550,12 +1402,11 @@ public:
 			// 
 			// textBox75
 			// 
-			this->textBox75->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->textBox75->BackColor = System::Drawing::Color::White;
 			this->textBox75->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox75->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox75->ForeColor = System::Drawing::Color::Red;
+			this->textBox75->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox75->Location = System::Drawing::Point(124, 364);
 			this->textBox75->MaxLength = 1;
 			this->textBox75->Name = L"textBox75";
@@ -1566,12 +1417,11 @@ public:
 			// 
 			// textBox76
 			// 
-			this->textBox76->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(235)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->textBox76->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox76->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox76->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox76->ForeColor = System::Drawing::Color::Red;
+			this->textBox76->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox76->Location = System::Drawing::Point(161, 364);
 			this->textBox76->MaxLength = 1;
 			this->textBox76->Name = L"textBox76";
@@ -1582,12 +1432,11 @@ public:
 			// 
 			// textBox77
 			// 
-			this->textBox77->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(235)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->textBox77->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox77->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox77->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox77->ForeColor = System::Drawing::Color::Red;
+			this->textBox77->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox77->Location = System::Drawing::Point(198, 364);
 			this->textBox77->MaxLength = 1;
 			this->textBox77->Name = L"textBox77";
@@ -1598,12 +1447,11 @@ public:
 			// 
 			// textBox78
 			// 
-			this->textBox78->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(235)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->textBox78->BackColor = System::Drawing::Color::Gainsboro;
 			this->textBox78->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox78->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox78->ForeColor = System::Drawing::Color::Red;
+			this->textBox78->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox78->Location = System::Drawing::Point(235, 364);
 			this->textBox78->MaxLength = 1;
 			this->textBox78->Name = L"textBox78";
@@ -1614,12 +1462,11 @@ public:
 			// 
 			// textBox79
 			// 
-			this->textBox79->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(225)));
+			this->textBox79->BackColor = System::Drawing::Color::White;
 			this->textBox79->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox79->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox79->ForeColor = System::Drawing::Color::Red;
+			this->textBox79->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox79->Location = System::Drawing::Point(272, 364);
 			this->textBox79->MaxLength = 1;
 			this->textBox79->Name = L"textBox79";
@@ -1630,12 +1477,11 @@ public:
 			// 
 			// textBox80
 			// 
-			this->textBox80->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(225)));
+			this->textBox80->BackColor = System::Drawing::Color::White;
 			this->textBox80->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox80->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox80->ForeColor = System::Drawing::Color::Red;
+			this->textBox80->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox80->Location = System::Drawing::Point(309, 364);
 			this->textBox80->MaxLength = 1;
 			this->textBox80->Name = L"textBox80";
@@ -1646,12 +1492,11 @@ public:
 			// 
 			// textBox81
 			// 
-			this->textBox81->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
-				static_cast<System::Int32>(static_cast<System::Byte>(225)));
+			this->textBox81->BackColor = System::Drawing::Color::White;
 			this->textBox81->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox81->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox81->ForeColor = System::Drawing::Color::Red;
+			this->textBox81->ForeColor = System::Drawing::Color::DimGray;
 			this->textBox81->Location = System::Drawing::Point(346, 364);
 			this->textBox81->MaxLength = 1;
 			this->textBox81->Name = L"textBox81";
@@ -1659,6 +1504,81 @@ public:
 			this->textBox81->TabIndex = 81;
 			this->textBox81->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			this->textBox81->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Sudoku::textBox81_KeyPress);
+			// 
+			// textBox34
+			// 
+			this->textBox34->BackColor = System::Drawing::Color::Gainsboro;
+			this->textBox34->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->textBox34->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->textBox34->ForeColor = System::Drawing::Color::DimGray;
+			this->textBox34->Location = System::Drawing::Point(272, 179);
+			this->textBox34->MaxLength = 1;
+			this->textBox34->Name = L"textBox34";
+			this->textBox34->Size = System::Drawing::Size(31, 31);
+			this->textBox34->TabIndex = 34;
+			this->textBox34->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			this->textBox34->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Sudoku::textBox81_KeyPress);
+			// 
+			// textBox35
+			// 
+			this->textBox35->BackColor = System::Drawing::Color::Gainsboro;
+			this->textBox35->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->textBox35->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->textBox35->ForeColor = System::Drawing::Color::DimGray;
+			this->textBox35->Location = System::Drawing::Point(309, 179);
+			this->textBox35->MaxLength = 1;
+			this->textBox35->Name = L"textBox35";
+			this->textBox35->Size = System::Drawing::Size(31, 31);
+			this->textBox35->TabIndex = 35;
+			this->textBox35->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			this->textBox35->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Sudoku::textBox81_KeyPress);
+			// 
+			// textBox43
+			// 
+			this->textBox43->BackColor = System::Drawing::Color::Gainsboro;
+			this->textBox43->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->textBox43->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->textBox43->ForeColor = System::Drawing::Color::DimGray;
+			this->textBox43->Location = System::Drawing::Point(272, 216);
+			this->textBox43->MaxLength = 1;
+			this->textBox43->Name = L"textBox43";
+			this->textBox43->Size = System::Drawing::Size(31, 31);
+			this->textBox43->TabIndex = 43;
+			this->textBox43->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			this->textBox43->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Sudoku::textBox81_KeyPress);
+			// 
+			// textBox44
+			// 
+			this->textBox44->BackColor = System::Drawing::Color::Gainsboro;
+			this->textBox44->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->textBox44->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->textBox44->ForeColor = System::Drawing::Color::DimGray;
+			this->textBox44->Location = System::Drawing::Point(309, 216);
+			this->textBox44->MaxLength = 1;
+			this->textBox44->Name = L"textBox44";
+			this->textBox44->Size = System::Drawing::Size(31, 31);
+			this->textBox44->TabIndex = 44;
+			this->textBox44->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			this->textBox44->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Sudoku::textBox81_KeyPress);
+			// 
+			// textBox52
+			// 
+			this->textBox52->BackColor = System::Drawing::Color::Gainsboro;
+			this->textBox52->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->textBox52->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->textBox52->ForeColor = System::Drawing::Color::DimGray;
+			this->textBox52->Location = System::Drawing::Point(272, 253);
+			this->textBox52->MaxLength = 1;
+			this->textBox52->Name = L"textBox52";
+			this->textBox52->Size = System::Drawing::Size(31, 31);
+			this->textBox52->TabIndex = 52;
+			this->textBox52->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			this->textBox52->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Sudoku::textBox81_KeyPress);
 			// 
 			// Sudoku
 			// 
@@ -1748,7 +1668,7 @@ public:
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->menuStrip1);
-			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->ForeColor = System::Drawing::SystemColors::Control;
 			this->MainMenuStrip = this->menuStrip1;
 			this->MaximizeBox = false;
 			this->Name = L"Sudoku";
